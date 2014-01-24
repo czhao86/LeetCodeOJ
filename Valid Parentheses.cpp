@@ -1,3 +1,8 @@
+#include <iostream>
+#include <vector>
+#include <stack>
+using namespace std;
+
 class Solution {
 public:
 	bool isValid(string s) {
@@ -5,17 +10,16 @@ public:
 		int n = s.length();
 		for (int i = 0; i < n; ++i)
 		{
-			char c = s[i];
-			if (c== '(' || c == '[' || c == '{')
+			if (s[i] == '(' || s[i] == '[' || s[i] == '{')
 			{
-				st.push(c);
+				st.push(s[i]);
 			}
 			else
 			{
 				if (st.empty()) return false;
-				char temp=st.top();
+				char temp = st.top();
 				st.pop();
-				if ((temp == '(' && c == ')') || (temp == '[' && c == ']') || (temp == '{' && c == '}'))
+				if ((temp == '(' && s[i] == ')') || (temp == '[' && s[i] == ']') || (temp == '{' && s[i] == '}'))
 					continue;
 				else return false;
 			}
@@ -24,3 +28,8 @@ public:
 		else return false;
 	}
 };
+
+int main()
+{
+	return 0;
+}
