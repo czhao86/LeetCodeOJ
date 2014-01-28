@@ -7,7 +7,7 @@ public:
 		_combinationSum(ans, tmp, candidates, 0, target);
 		return ans;
 	}
-	void _combinationSum(vector<vector<int> > &ans, vector<int> &tmp, vector<int> &candidates, int start, int target)
+	void _combinationSum(vector<vector<int> > &ans, vector<int> &tmp, vector<int> candidates, int start, int target)
 	{
 		if (target == 0)
 		{
