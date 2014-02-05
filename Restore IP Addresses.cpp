@@ -15,13 +15,10 @@ public:
 	}
 	void _restore(vector<string> &ans, string &tmp, string s, int site, int num)
 	{
-		if (site == 4 || num == s.size())
+	        if (site == 4 && num == s.size())
 		{
-			if (site == 4 && num == s.size())
-			{
-				ans.push_back(tmp);
-				return;
-			}
+			ans.push_back(tmp);
+			return;
 		}
 		int x = 0;
 		for (int i = num; i-num<=2, i < s.size(); ++i)
