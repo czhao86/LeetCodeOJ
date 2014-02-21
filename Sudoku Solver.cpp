@@ -42,7 +42,7 @@ public:
 			{
 				if (!tmp[i])
 				{
-					board[r][c] = i + '0';
+					board[r][c] = '0'+i;
 					_solveSudoku(board, num + 1, found);
 					if (found) break;
 					board[r][c] = '.';
